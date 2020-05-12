@@ -6,10 +6,6 @@ import {Container, Content, List, ListItem, Text} from 'native-base';
 const CountriesList = ({navigation, route}) => {
   const data = route.params.data;
 
-  const navigateToWeatherDetailsScreen = city => {
-    navigation.navigate('weather_details', {city});
-  };
-
   return (
     <Container>
       <Content>
@@ -19,9 +15,11 @@ const CountriesList = ({navigation, route}) => {
             `${index}`;
           }}
           renderItem={({item, index}) => {
-            console.log('Item', item);
             return (
-              <ListItem onPress={navigateToWeatherDetailsScreen(item.capital)}>
+              <ListItem
+                onPress={() => {
+                  navigation.navigate('weather_details', {data: item.capital});
+                }}>
                 <View style={styles.listItemContanier}>
                   <View style={styles.listDataContainer}>
                     <Text>{item.name}</Text>
