@@ -10,8 +10,16 @@ const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="home" component={HomeScreen} />
-        <Stack.Screen name="details" component={DetailsScreen} />
+        <Stack.Screen
+          name="home"
+          component={HomeScreen}
+          options={{headerTitle: 'Assignment'}}
+        />
+        <Stack.Screen
+          name="details"
+          component={DetailsScreen}
+          options={{headerTitle: 'Post Details'}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,11 +1,14 @@
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {Container, Content, Text} from 'native-base';
 
-const DetailsScreen = () => {
+const DetailsScreen = ({route}) => {
+  const data = route.params.data;
   return (
-    <SafeAreaView>
-      <Text>Details Screen</Text>
-    </SafeAreaView>
+    <Container>
+      <Content>
+        <Text>{JSON.stringify(data)}</Text>
+      </Content>
+    </Container>
   );
 };
 
