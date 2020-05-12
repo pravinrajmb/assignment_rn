@@ -1,15 +1,15 @@
 import React from 'react';
 import {Container, Content, Text} from 'native-base';
 
-const DetailsScreen = ({route}) => {
-  const data = route.params.data;
+const WeatherDetailsScreen = ({route}) => {
+  const city = route.params.city;
   return (
     <Container>
       <Content>
-        <Text>{JSON.stringify(data)}</Text>
+        <Text>{city}</Text>
       </Content>
     </Container>
   );
 };
 
-export {DetailsScreen};
+export {WeatherDetailsScreen};

@@ -2,7 +2,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {HomeScreen, DetailsScreen} from './screens';
+import {HomeScreen, CountriesList, WeatherDetailsScreen} from './screens';
 
 const Stack = createStackNavigator();
 
@@ -16,9 +16,14 @@ const AppNavigator = () => {
           options={{headerTitle: 'Assignment'}}
         />
         <Stack.Screen
-          name="details"
-          component={DetailsScreen}
-          options={{headerTitle: 'Post Details'}}
+          name="countrieslist"
+          component={CountriesList}
+          options={{headerTitle: 'Select Country'}}
+        />
+        <Stack.Screen
+          name={'weather_details'}
+          component={WeatherDetailsScreen}
+          options={{headerTitle: 'Weather Details'}}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -2,7 +2,7 @@ import axios from 'axios';
 import * as AxiosLogger from 'axios-logger';
 
 const axiosInstance = axios.create({
-  baseURL: 'https://hn.algolia.com/api/v1',
+  baseURL: 'http://api.weatherstack.com',
 });
 
 AxiosLogger.setGlobalConfig({
